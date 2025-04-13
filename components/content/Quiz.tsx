@@ -134,7 +134,7 @@ export default function Quiz({ questions, onComplete }: QuizProps) {
                   >
                     {String.fromCharCode(65 + index)}
                   </div>
-                  <span>{option}</span>
+                  <span className="text-green-700"> {option}</span>
                 </div>
 
                 {showFeedback && index === questions[currentQuestion].correctAnswer && (

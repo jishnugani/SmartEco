@@ -52,49 +52,34 @@ export default function Navbar() {
           <div className="hidden md:flex items-center space-x-8">
             <Link
               href="/"
-              className={`${
-                scrolled
-                  ? "text-gray-700 dark:text-gray-300"
-                  : "text-gray-700 dark:text-white"
-              } hover:text-green-500 dark:hover:text-green-400 transition-colors relative group`}
+              className="text-green-700 dark:text-green-400 hover:text-green-500 dark:hover:text-green-400 transition-colors relative group"
             >
               Home
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-green-500 transition-all duration-300 group-hover:w-full"></span>
             </Link>
             <Link
               href="/content"
-              className={`${
-                scrolled
-                  ? "text-gray-700 dark:text-gray-300"
-                  : "text-gray-700 dark:text-white"
-              } hover:text-green-500 dark:hover:text-green-400 transition-colors relative group`}
+              className="text-green-700 dark:text-green-400 hover:text-green-500 dark:hover:text-green-400 transition-colors relative group"
             >
               Educational Content
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-green-500 transition-all duration-300 group-hover:w-full"></span>
             </Link>
             <Link
               href="/calc"
-              className={`${
-                scrolled
-                  ? "text-gray-700 dark:text-gray-300"
-                  : "text-gray-700 dark:text-white"
-              } hover:text-green-500 dark:hover:text-green-400 transition-colors relative group`}
+              className="text-green-700 dark:text-green-400 hover:text-green-500 dark:hover:text-green-400 transition-colors relative group"
             >
               Vehicle CO2 Calculator
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-green-500 transition-all duration-300 group-hover:w-full"></span>
             </Link>
             <Link
               href="/eco-tracker"
-              className={`${
-                scrolled
-                  ? "text-gray-700 dark:text-gray-300"
-                  : "text-gray-700 dark:text-white"
-              } hover:text-green-500 dark:hover:text-green-400 transition-colors relative group`}
+              className="text-green-700 dark:text-green-400 hover:text-green-500 dark:hover:text-green-400 transition-colors relative group"
             >
               Keep It green Tracker
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-green-500 transition-all duration-300 group-hover:w-full"></span>
             </Link>
           </div>
+
 
           {/* Mobile menu button */}
           <div className="md:hidden">
@@ -115,37 +100,37 @@ export default function Navbar() {
       {/* Mobile menu */}
       {isMenuOpen && (
         <div className="md:hidden bg-white dark:bg-gray-800 shadow-lg py-4 animate-slideInRight">
-          <div className="container mx-auto px-4 flex flex-col space-y-4">
-            <Link
-              href="/"
-              className="block py-2 px-4 text-black hover:bg-green-50 dark:text-white dark:hover:bg-green-900/20 rounded-lg transition-colors"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Home
-            </Link>
-            <Link
-              href="/content"
-              className="block py-2 px-4 text-black hover:bg-green-50 dark:text-white dark:hover:bg-green-900/20 rounded-lg transition-colors"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Educational Content
-            </Link>
-            <Link
-              href="/calc"
-              className="block py-2 px-4 text-black hover:bg-green-50 dark:text-white dark:hover:bg-green-900/20 rounded-lg transition-colors"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              CO2 Calculator
-            </Link>
-            <Link
-              href="/eco-tracker"
-              className="block py-2 px-4 text-black hover:bg-green-50 dark:text-white dark:hover:bg-green-900/20 rounded-lg transition-colors"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Eco Tracker
-            </Link>
-          </div>
+        <div className="container mx-auto px-4 flex flex-col space-y-4">
+          <Link
+            href="/"
+            className="block py-2 px-4 text-green-700 hover:bg-green-50 dark:text-green-400 dark:hover:bg-green-900/20 rounded-lg transition-colors"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Home
+          </Link>
+          <Link
+            href="/content"
+            className="block py-2 px-4 text-green-700 hover:bg-green-50 dark:text-green-400 dark:hover:bg-green-900/20 rounded-lg transition-colors"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Educational Content
+          </Link>
+          <Link
+            href="/calc"
+            className="block py-2 px-4 text-green-700 hover:bg-green-50 dark:text-green-400 dark:hover:bg-green-900/20 rounded-lg transition-colors"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            CO2 Calculator
+          </Link>
+          <Link
+            href="/eco-tracker"
+            className="block py-2 px-4 text-green-700 hover:bg-green-50 dark:text-green-400 dark:hover:bg-green-900/20 rounded-lg transition-colors"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Eco Tracker
+          </Link>
         </div>
+      </div>      
       )}
     </nav>
   )
