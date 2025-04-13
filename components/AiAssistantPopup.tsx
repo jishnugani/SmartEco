@@ -96,7 +96,7 @@ export default function AIAssistantPopup() {
               ) : (
                 chatHistory.map((chat, index) => (
                   <div key={index} className={`flex ${chat.type === 'user' ? 'justify-end' : 'justify-start'}`}>
-                    <div className={`rounded-lg p-3 max-w-[85%] ${chat.type === 'user' ? 'bg-green-100' : 'bg-gray-100'}`}>
+                    <div className={`rounded-lg p-3 max-w-[85%] ${chat.type === 'user' ? 'bg-green-800 text-white' : 'bg-green-700 text-white'}`}>
                       {chat.message}
                     </div>
                   </div>
@@ -118,7 +118,7 @@ export default function AIAssistantPopup() {
                 value={aiPrompt}
                 onChange={(e) => setAiPrompt(e.target.value)}
                 onKeyDown={(e) => e.key === "Enter" && getAiResponse()}
-                className="flex-1"
+                className="flex-1 text-green-500"
               />
               <Button onClick={getAiResponse} disabled={isLoading || !aiPrompt.trim()} className="bg-green-600 hover:bg-green-700">
                 {isLoading ? <Loader2 className="h-4 w-4 animate-spin" /> : <Send className="h-4 w-4" />}
